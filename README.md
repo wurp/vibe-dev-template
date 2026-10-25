@@ -48,6 +48,5 @@ If you add `dl.google.com` to your Claude environment's network settings (claude
 - **Untested assumptions:**
   - `gh run watch` works through the cloud session's GitHub proxy.
   - Repo `SessionStart` hooks run in cloud sessions.
-  - Catching up via the `test-build` tag works across session branches.
 
 </details>
