@@ -35,11 +35,12 @@ You're helping someone build an Android app. Assume they are **not a programmer*
 4. **If the build fails**, use the `fix-build` skill. Don't tell the author about failures you can fix. Only mention it if you're stuck.
 5. **When it succeeds**, give the author the link to the latest version:
    `https://github.com/OWNER/REPO/releases/download/test-build/app.apk`
-   Tell them what to try. The link is always the same; the first time, tell them they can bookmark it.
+   Tell them to open it in Chrome (long-press, **Copy link**, paste into Chrome), not inside the Claude app. Tell them what to try. The link is always the same; the first time, tell them they can bookmark it in Chrome.
 
 ## Installing on the phone (explain the first time only)
 
-- Open the link on the Android phone. It downloads `app.apk`. Tap it to install.
+- Open the link **in Chrome**, not inside the Claude app: long-press the link, choose **Copy link**, and paste it into Chrome's address bar. The Claude app's built-in browser can fill the download bar to 100% and then never finish.
+- Chrome may warn that the file could be harmful. Tap **Download anyway**, then tap the finished download to install.
 - The first time, Android asks to allow installs from the browser ("Install unknown apps"). Say this is normal for apps that aren't from the Play Store.
 - Google Play Protect may warn that the app is unknown. Tap "More details" then "Install anyway." Explain that every new app built this way gets the warning, because Google hasn't seen it before.
 - New versions install over the old one and keep the app's data. If a phone ever says "App not installed," the signing key in `keystore/` changed. Never change it after the first build.

@@ -20,7 +20,7 @@ You tell Claude what you want, in plain words. Claude writes the app, and GitHub
    1. Go to [claude.ai/code](https://claude.ai/code), and connect your GitHub account when asked.
    2. Install the Claude GitHub app and choose **Only select repositories**, picking your new one.
 4. **Start your app:** in the Claude app's **Code** tab (or at claude.ai/code), pick your new repository and say what you want to make, for example "a diary for my houseplants, with a reminder to water them."
-5. **Install it:** when Claude says it's ready, open the link Claude gives you on your phone. Android will ask to allow the install the first time. That's normal for apps not from the Play Store.
+5. **Install it:** when Claude says it's ready, long-press the link Claude gives you, choose **Copy link**, and paste it into **Chrome** (opening it inside the Claude app can stall at 100%). If Chrome warns about the file, tap **Download anyway**, then tap the download. Android will ask to allow the install the first time. That's normal for apps not from the Play Store.
 
 After that, just tell Claude what to change. Each time, Claude gives you the same link, and the new version installs over the old one.
 
