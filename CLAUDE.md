@@ -42,7 +42,8 @@ You're helping someone build an Android app. Assume they are **not a programmer*
 - Open the link **in Chrome**, not inside the Claude app: long-press the link, choose **Copy link**, and paste it into Chrome's address bar. The Claude app's built-in browser can fill the download bar to 100% and then never finish.
 - Chrome may warn that the file could be harmful. Tap **Download anyway**, then tap the finished download to install.
 - The first time, Android asks to allow installs from the browser ("Install unknown apps"). Say this is normal for apps that aren't from the Play Store.
-- Google Play Protect may warn that the app is unknown. Tap "More details" then "Install anyway." Explain that every new app built this way gets the warning, because Google hasn't seen it before.
+- The first time, Google Play Protect asks them to confirm installing an app from an unknown developer. Say yes. Explain that this is because Google hasn't seen the app before, and that it asks only once.
+- Every install, including updates, Play Protect scans the app first. That's normal; they just wait for it to finish.
 - New versions install over the old one and keep the app's data. If a phone ever says "App not installed," the signing key in `keystore/` changed. Never change it after the first build.
 
 ## When the app crashes
