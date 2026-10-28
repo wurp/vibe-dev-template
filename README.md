@@ -3,7 +3,7 @@
 # Build Android apps from your phone with Claude
 
 <!-- vibe-dev:start-link -->
-> **Made a repository from this template?** Within a minute or two, a **Start building with Claude** link appears here. Refresh the page if you don't see it yet.
+> **Made a repository from this template?** Within a minute or two, start steps for your repository appear here. Refresh the page if you don't see them yet.
 <!-- /vibe-dev:start-link -->
 
 Describe the app you want in the Claude app. Claude writes it, GitHub builds it, and a few minutes later you install it on your phone from a link. Ask for changes the same way; each new version installs over the old one and keeps your data.
@@ -19,7 +19,7 @@ Your code lives in your own GitHub repository, and it uses your own Claude subsc
 ## Set up (about 5 minutes)
 
 1. **Create your app's repository.** Tap **[Create my app](https://github.com/new?template_owner=wurp&template_name=vibe-dev-template&owner=@me&visibility=private)**. Sign in to GitHub (or create a free account), give the repository a short name like `plant-diary`, optionally say what the app should do under **Description** (Claude starts from it), and tap **Create repository**. It's private: only you can see it. (To share the app with friends later, you can make it public.)
-2. **Start building.** About a minute later, your new repository's page shows a **Start building with Claude** link at the top. Tap it. In the Claude app, **check that the repository name above the message box is your new repository**; if not, tap it and pick yours. Approve GitHub access if Claude asks, then describe your app, for example "a diary for my houseplants that reminds me to water them."
+2. **Start building.** About a minute later, your new repository's page shows **Next: start building** at the top. In the Claude app, open **Code** → **New session**, tap the repository name above the message box and **choose your new repository** (the app opens on the one you used last), then send the message shown there. Approve GitHub access if Claude asks.
 3. **Install it.** When Claude says it's ready, it gives you a link.
    - Long-press the link, choose **Copy link**, and paste it into **Chrome**, signed in to GitHub. (Downloads can stall inside the Claude app.)
    - If Chrome warns about the file, tap **Download anyway**, then tap the download.

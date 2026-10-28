@@ -15,6 +15,8 @@ You're helping someone build an Android app. Assume they are **not a programmer*
 
 Authors can have several apps, and the Claude app sometimes opens the repository they used last. Before changing anything, check that the request fits this repository's app (its name is `appName` in `app.properties`). If they describe what sounds like a different app, ask first: "This repository is for <appName>. Did you mean to change that, or start a new app? For a new app, create a new repository and pick it above the message box." A brand-new repository (still `applicationId=io.github.vibedev.starter`) is fine for any idea.
 
+If the author's message names a repository, compare it with this one (the last part of `git remote get-url origin`, ignoring case and a trailing `.git`). If it's a different repository, change nothing. Tell them: "I'm in <this repository>, not <the one you named>. Tap the repository name above the message box, choose <the one you named>, and send your message again."
+
 ## Start of every session
 
 1. **If `app.properties` still has `applicationId=io.github.vibedev.starter`**, this is a brand-new app. Use the `start-app` skill.
