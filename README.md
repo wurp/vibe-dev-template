@@ -1,52 +1,47 @@
-# Vibe Dev app template
+<!-- Claude: this file is the setup guide for people. Follow CLAUDE.md, not this file. When starting a new app, the start-app skill replaces this file with a README for the app. -->
 
-Make your own Android app by describing it to Claude. No programming needed.
+# Build Android apps from your phone with Claude
 
-You tell Claude what you want, in plain words. Claude writes the app, and GitHub builds it. A few minutes later you can install the new version on your phone from a link that never changes.
+Describe the app you want in the Claude app. Claude writes it, GitHub builds it, and a few minutes later you install it on your phone from a link. Ask for changes the same way; each new version installs over the old one and keeps your data.
 
-> **Early test version.** This is a prototype of Vibe Dev. Expect rough edges.
+Your code lives in your own GitHub repository, and it uses your own Claude subscription. No other service holds your login.
 
 ## What you need
 
 - An Android phone.
-- A **Claude Pro or Max** plan. Free plans can't use Claude Code.
-- A free **GitHub** account. You don't need to learn GitHub; it just stores and builds your app.
+- A **Claude Pro or Max** plan. Claude Code in the cloud isn't on the Free plan. (With an API key, see [Using a computer or an API key](https://github.com/wurp/vibe-dev-template/wiki/Using-a-computer-or-an-API-key).)
+- A free **GitHub** account.
 
-## Set up (once, about 20 minutes)
+## Set up (once, about 15 minutes)
+
+Steps 1–3 happen in a web browser, on your phone or a computer.
 
 1. **Create a GitHub account** at [github.com/signup](https://github.com/signup), if you don't have one.
-2. **Copy this template:** tap **Use this template → Create a new repository** at the top of this page. Give it a short name (for example, `plant-diary`), leave it **Public**, and tap **Create repository**.
-3. **Connect GitHub to Claude:**
-   1. Go to [claude.ai/code](https://claude.ai/code), and connect your GitHub account when asked.
-   2. Install the Claude GitHub app and choose **Only select repositories**, picking your new one.
-4. **Start your app:** in the Claude app's **Code** tab (or at claude.ai/code), pick your new repository and say what you want to make, for example "a diary for my houseplants, with a reminder to water them."
-5. **Install it:** when Claude says it's ready, long-press the link Claude gives you, choose **Copy link**, and paste it into **Chrome** (opening it inside the Claude app can stall at 100%). If Chrome warns about the file, tap **Download anyway**, then tap the download. Android will ask to allow the install the first time. That's normal for apps not from the Play Store.
+2. **Copy this template.** At the top of this page, tap **Use this template → Create a new repository**. Give it a short name (for example `plant-diary`), leave it **Public** so the download link works without signing in, and tap **Create repository**.
+3. **Let Claude use it.**
+   - If you've never used Claude Code on the web: go to [claude.ai/code](https://claude.ai/code), sign in, and connect GitHub when asked.
+   - Then give Claude access to the new repository: go to [github.com/apps/claude/installations/new](https://github.com/apps/claude/installations/new) (or, if Claude is already installed, [github.com/settings/installations](https://github.com/settings/installations) → **Configure** next to Claude), choose **Only select repositories**, and add your new one.
+   - GitHub may ask you to approve permissions. That's expected.
+4. **Start your app.** In the Claude app, open **Code**, tap **New session**, tap the repository name shown above the message box, and pick your new repository. Then say what you want, for example "a diary for my houseplants that reminds me to water them."
+5. **Install it.** When Claude says it's ready, it gives you a link.
+   - Long-press the link, choose **Copy link**, and paste it into **Chrome**. (Downloads can stall inside the Claude app.)
+   - If Chrome warns about the file, tap **Download anyway**, then tap the download.
+   - The first time, Android asks you to allow installs from Chrome, and Google Play Protect asks you to confirm an app from an unknown developer. Both are normal for apps not from the Play Store.
+   - Play Protect scans each new version before it installs. Just wait for it.
 
-After that, just tell Claude what to change. Each time, Claude gives you the same link, and the new version installs over the old one.
+After that, tell Claude what to change. The link stays the same, and the new version installs over the old one.
 
 ## If something goes wrong
 
 - **The app crashed:** open it again. It shows a **Copy for Claude** button. Tap it and paste the result to Claude.
-- **"App not installed" when updating:** tell Claude. Don't uninstall unless Claude says to, because uninstalling deletes the app's data.
+- **Anything else:** see [Troubleshooting](https://github.com/wurp/vibe-dev-template/wiki/Troubleshooting).
 
-## Optional: faster checks
+## More
 
-If you add `dl.google.com` to your Claude environment's network settings (claude.ai/code → environment → **Network access: Custom**, with "include defaults" checked), Claude can check each change before sending it to GitHub. That catches mistakes sooner. Everything works without it.
+- [Setup in detail](https://github.com/wurp/vibe-dev-template/wiki/Setup-in-detail), with what each screen looks like.
+- [Faster checks with one network setting](https://github.com/wurp/vibe-dev-template/wiki/Setup-in-detail#optional-faster-checks).
+- [How it works](https://github.com/wurp/vibe-dev-template/wiki/How-it-works), for developers.
+- [Costs and limits](https://github.com/wurp/vibe-dev-template/wiki/Costs-and-limits).
+- Questions and ideas: [Discussions](https://github.com/wurp/vibe-dev-template/discussions).
 
----
-
-<details>
-<summary>For developers: how this works</summary>
-
-- **`.github/workflows/build.yml`:** builds a debug APK on every push to any branch and republishes it as the `test-build` prerelease, at `releases/download/test-build/app.apk`.
-- **Signing:** `keystore/debug.keystore` is committed, so every build has the same signer. `versionCode` is the Actions run number.
-- **`app.properties`:** holds `applicationId` and `appName`, so the source namespace (`com.vibedev.app`) never changes.
-- **`CLAUDE.md` and `.claude/skills/`:** tell Claude to work for a non-programmer: no git jargon, push and watch CI, and hand over the link.
-- **`.claude/hooks/session-start.sh`:** in cloud sessions, installs the Android SDK if `dl.google.com` is reachable. Builds there use the preinstalled `gradle`, because `./gradlew` can't download Gradle through the session proxy.
-- **Versions:** AGP 8.13 and Gradle 8.14.3 to match Claude Code cloud sessions, with AndroidX versions held back to match. See `gradle/libs.versions.toml`.
-- **Crash capture:** debug builds save uncaught exceptions and show them on the next launch (`CrashCatcher.kt`).
-- **Untested assumptions:**
-  - `gh run watch` works through the cloud session's GitHub proxy.
-  - Repo `SessionStart` hooks run in cloud sessions.
-
-</details>
+MIT licensed. Not affiliated with Anthropic.

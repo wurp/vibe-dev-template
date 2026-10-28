@@ -9,7 +9,8 @@ plugins {
 
 // The app's ID and display name live in app.properties at the repo root.
 val appProps = Properties().apply {
-    rootProject.file("app.properties").inputStream().use { load(it) }
+    // Read as UTF-8 so names like "Café Notes" survive (Properties.load(InputStream) assumes Latin-1).
+    rootProject.file("app.properties").reader(Charsets.UTF_8).use { load(it) }
 }
 
 // CI passes -PversionCode=<run number> so every new build counts as an upgrade.

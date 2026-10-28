@@ -62,7 +62,7 @@ Keep to this setup unless the author needs something it can't do:
 
 ### Permissions that need a warning
 
-The Vibe Store shows a strong warning before installing apps that use any of these, and Google may block some of them outright:
+Android treats these as dangerous. Google Play Protect may block apps that use some of them when they're installed from a download link, and installers see strong warnings:
 
 - Reading or receiving SMS
 - Accessibility services
@@ -72,7 +72,7 @@ The Vibe Store shows a strong warning before installing apps that use any of the
 - Downloading and running code
 - Showing a website as the whole app
 
-**Before adding one**, tell the author plainly what it allows, that installers will see a scary warning, and ask if there's another way to get what they want. Camera, location, microphone, and notifications are normal and fine, but use them only when the feature needs them.
+**Before adding one**, tell the author plainly what it allows, that installers will see a scary warning or be blocked, and ask if there's another way to get what they want. Camera, location, microphone, and notifications are normal and fine, but use them only when the feature needs them.
 
 ## Secrets
 
@@ -81,6 +81,6 @@ This repository is **public**. Anyone can read everything in it.
 - Never commit passwords, API keys, tokens, or personal information, even if the author pastes them into the chat. Explain why, and suggest a design that doesn't need them.
 - The debug key in `keystore/` is meant to be public. It's only for test builds.
 
-## Publishing
+## Sharing the app
 
-When the author wants to share the app beyond their own phone, use the `prepare-for-store` skill.
+When the author wants other people to have the app, use the `share-app` skill.

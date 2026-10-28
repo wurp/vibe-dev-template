@@ -30,10 +30,29 @@ Ask what the app should do, in one message. If they already said, don't ask agai
    ```
    Do this only before the first build. Changing it later stops new versions from installing over old ones.
 
-## 3. Build the first version
+## 3. Replace the README
+
+`README.md` is the template's setup guide, which this app doesn't need. Replace it with a short README for the app:
+
+```markdown
+# <appName>
+
+<One or two plain sentences: what the app does and who it's for.>
+
+## Install
+
+On an Android phone, open this link in Chrome and install the file it downloads:
+https://github.com/<owner>/<repo>/releases/download/test-build/app.apk
+
+Built with [vibe-dev-template](https://github.com/wurp/vibe-dev-template) and Claude.
+```
+
+Keep it current when the app changes in ways the description should mention.
+
+## 4. Build the first version
 
 Replace `StarterScreen` in `MainActivity.kt` with a simple first version of their idea: one screen that does the core thing, even if crudely. Keep `CrashReportDialog()` in `setContent`. Optionally change `Brand` in `ui/theme/Theme.kt` to a color that suits the app.
 
-## 4. Ship it
+## 5. Ship it
 
 Follow "After every change" in `CLAUDE.md`. When the build is ready, send the link and, since this is the first time, the short "Installing on the phone" explanation. End by asking what they'd like to change or add next.
