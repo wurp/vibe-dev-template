@@ -9,7 +9,15 @@ Explain the two options in plain words and ask which they want. Don't start the 
 
 ## Option 1: send friends the link (easiest)
 
-The same download link works for anyone, because this repository is public.
+First check the repository's visibility with `gh repo view --json visibility`.
+
+- **Public:** the same download link works for anyone.
+- **Private:** the link only works for the author, signed in to GitHub. To share by link, the author makes the repository public: on GitHub, **Settings → General → Danger Zone → Change visibility**. Explain plainly what that means:
+  - Anyone can then read the app's code.
+  - The test signing key in `keystore/` becomes public. Someone could build a fake "update" signed with it. That only matters if they get a friend to install their file, but tell the author.
+  - Before switching, check that nothing private is in the code or the history.
+
+Once the link works:
 
 - Friends install it the way the author did: open the link in Chrome, allow installs from Chrome the first time, and confirm Google Play Protect's prompt.
 - For a new version, they open the link again and install over the old one. Their data stays.
@@ -26,7 +34,7 @@ Tell the author up front what it takes, then ask whether to go ahead:
 - **Their own Google Play developer account.** It costs $25 once and needs ID verification. It's set up at play.google.com/console, easiest on a computer.
 - **A closed test first.** New personal accounts must have at least 12 testers opted in for 14 days before the app can be public.
 - **A privacy policy and a data-safety form,** even if the app collects nothing.
-- **A private release signing key.** It must never go in this public repository. The debug key in `keystore/` can't be used for Play.
+- **A private release signing key.** It must never be committed to the repository, even a private one. The test key in `keystore/` can't be used for Play.
 
 What you can do for them:
 

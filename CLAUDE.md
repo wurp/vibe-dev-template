@@ -40,6 +40,7 @@ You're helping someone build an Android app. Assume they are **not a programmer*
 ## Installing on the phone (explain the first time only)
 
 - Open the link **in Chrome**, not inside the Claude app: long-press the link, choose **Copy link**, and paste it into Chrome's address bar. The Claude app's built-in browser can fill the download bar to 100% and then never finish.
+- If the repository is private, the link only works when Chrome is signed in to GitHub. If they see "Not Found", that's the likely cause.
 - Chrome may warn that the file could be harmful. Tap **Download anyway**, then tap the finished download to install.
 - The first time, Android asks to allow installs from the browser ("Install unknown apps"). Say this is normal for apps that aren't from the Play Store.
 - The first time, Google Play Protect asks them to confirm installing an app from an unknown developer. Say yes. Explain that this is because Google hasn't seen the app before, and that it asks only once.
@@ -76,10 +77,10 @@ Android treats these as dangerous. Google Play Protect may block apps that use s
 
 ## Secrets
 
-This repository is **public**. Anyone can read everything in it.
+This repository may be **public** (anyone can read it) or **private** (only the author). Check with `gh repo view --json visibility`. Either way, treat it as if it could become public, because authors switch to public to share their app.
 
 - Never commit passwords, API keys, tokens, or personal information, even if the author pastes them into the chat. Explain why, and suggest a design that doesn't need them.
-- The debug key in `keystore/` is meant to be public. It's only for test builds.
+- The test signing key in `keystore/` is committed on purpose. It only signs test builds.
 
 ## Sharing the app
 
