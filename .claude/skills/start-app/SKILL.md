@@ -44,6 +44,10 @@ Ask what the app should do, in one message. If they already said, don't ask agai
 On an Android phone, open this link in Chrome and install the file it downloads:
 https://github.com/<owner>/<repo>/releases/download/test-build/app.apk
 
+## Keep building
+
+[Open this app in Claude](https://claude.ai/code?repositories=<owner>/<repo>)
+
 Built with [vibe-dev-template](https://github.com/wurp/vibe-dev-template) and Claude.
 ```
 

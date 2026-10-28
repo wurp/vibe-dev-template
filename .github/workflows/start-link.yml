@@ -1,0 +1,48 @@
+# Runs once in a new repository made from this template: replaces the placeholder in
+# README.md with a "Start building with Claude" link that already points at this repository.
+# Does nothing in the template itself, or once the link (or a new README) is in place.
+name: Add start link
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  start-link:
+    if: github.repository != 'wurp/vibe-dev-template'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Put this repository's link into the README
+        run: |
+          python3 - <<'PY'
+          import os, pathlib, re, urllib.parse
+          readme = pathlib.Path("README.md")
+          start, end = "<!-- vibe-dev:start-link -->", "<!-- /vibe-dev:start-link -->"
+          text = readme.read_text() if readme.exists() else ""
+          if start not in text or end not in text:
+              raise SystemExit("No placeholder; nothing to do.")
+          repo = os.environ["GITHUB_REPOSITORY"]
+          prompt = urllib.parse.quote("I'd like to make a new app.")
+          link = f"https://claude.ai/code?repositories={repo}&prompt={prompt}"
+          block = (
+              f"{start}\n"
+              f"## [▶ Start building with Claude]({link})\n\n"
+              "Tap the link above on your phone. If Claude asks for access to GitHub, approve it. "
+              "Then describe the app you want.\n"
+              "<!-- /vibe-dev:start-link done -->"
+          )
+          readme.write_text(re.sub(re.escape(start) + r".*?" + re.escape(end), lambda _: block, text, flags=re.S))
+          PY
+          if ! git diff --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -am "Add the Start building with Claude link"
+            git push
+          fi
