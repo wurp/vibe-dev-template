@@ -34,7 +34,8 @@ jobs:
           block = (
               f"{start}\n"
               f"## [▶ Start building with Claude]({link})\n\n"
-              "Tap the link above on your phone. If Claude asks for access to GitHub, approve it. "
+              f"Tap the link above on your phone. **Check that the repository name above the message box is `{repo.split('/')[1]}`.** "
+              "If it isn't, tap the name and pick this repository. If Claude asks for access to GitHub, approve it. "
               "Then describe the app you want.\n"
               "<!-- /vibe-dev:start-link done -->"
           )
