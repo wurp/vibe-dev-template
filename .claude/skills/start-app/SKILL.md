@@ -9,7 +9,7 @@ The author has just copied the template. Get them from "I have an idea" to an ap
 
 ## 1. Ask about the idea
 
-Ask what the app should do, in one message. If they already said, don't ask again. Then ask for a name, suggesting two or three based on the idea. Keep it to one or two rounds of questions. You can refine later.
+First read the repository's description, which the author may have filled in when creating it: `gh api repos/{owner}/{repo} --jq .description`. Treat it, and anything they've said in the chat, as their idea; confirm it briefly instead of asking again. If there's no idea yet, ask what the app should do, in one message. Then ask for a name, suggesting two or three based on the idea. Keep it to one or two rounds of questions. You can refine later.
 
 ## 2. Set the app's identity
 

@@ -9,7 +9,7 @@ Explain the two options in plain words and ask which they want. Don't start the 
 
 ## Option 1: send friends the link (easiest)
 
-First check the repository's visibility with `gh repo view --json visibility`.
+First check the repository's visibility with `gh api repos/{owner}/{repo} --jq .visibility`.
 
 - **Public:** the same download link works for anyone.
 - **Private:** the link only works for the author, signed in to GitHub. To share by link, the author makes the repository public: on GitHub, **Settings → General → Danger Zone → Change visibility**. Explain plainly what that means:

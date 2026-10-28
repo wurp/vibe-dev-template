@@ -18,7 +18,7 @@ Your code lives in your own GitHub repository, and it uses your own Claude subsc
 
 ## Set up (about 5 minutes)
 
-1. **Create your app's repository.** Tap **[Create my app](https://github.com/new?template_owner=wurp&template_name=vibe-dev-template&owner=@me&visibility=private)**. Sign in to GitHub (or create a free account), give the repository a short name like `plant-diary`, and tap **Create repository**. It's private: only you can see it. (To share the app with friends later, you can make it public.)
+1. **Create your app's repository.** Tap **[Create my app](https://github.com/new?template_owner=wurp&template_name=vibe-dev-template&owner=@me&visibility=private)**. Sign in to GitHub (or create a free account), give the repository a short name like `plant-diary`, optionally say what the app should do under **Description** (Claude starts from it), and tap **Create repository**. It's private: only you can see it. (To share the app with friends later, you can make it public.)
 2. **Start building.** About a minute later, your new repository's page shows a **Start building with Claude** link at the top. Tap it. In the Claude app, **check that the repository name above the message box is your new repository**; if not, tap it and pick yours. Approve GitHub access if Claude asks, then describe your app, for example "a diary for my houseplants that reminds me to water them."
 3. **Install it.** When Claude says it's ready, it gives you a link.
    - Long-press the link, choose **Copy link**, and paste it into **Chrome**, signed in to GitHub. (Downloads can stall inside the Claude app.)

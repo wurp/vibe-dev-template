@@ -81,7 +81,7 @@ Android treats these as dangerous. Google Play Protect may block apps that use s
 
 ## Secrets
 
-This repository may be **public** (anyone can read it) or **private** (only the author). Check with `gh repo view --json visibility`. Either way, treat it as if it could become public, because authors switch to public to share their app.
+This repository may be **public** (anyone can read it) or **private** (only the author). Check with `gh api repos/{owner}/{repo} --jq .visibility`. (`gh repo view` and other GraphQL commands don't work in cloud sessions; use `gh api` REST calls.) Either way, treat it as if it could become public, because authors switch to public to share their app.
 
 - Never commit passwords, API keys, tokens, or personal information, even if the author pastes them into the chat. Explain why, and suggest a design that doesn't need them.
 - The test signing key in `keystore/` is committed on purpose. It only signs test builds.
