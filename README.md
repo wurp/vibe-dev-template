@@ -2,15 +2,15 @@
 
 # Build Android apps from your phone with Claude
 
-Describe an app in the Claude app. Claude writes it, GitHub builds it, and a few minutes later you install it on your phone from a link. Ask for changes the same way; each new version installs over the old one and keeps your data. Your code stays in your own GitHub repository, using your own Claude subscription.
-
 ## Start a new app (3 steps)
 
 1. **[Create your app's repository](https://github.com/new?template_owner=wurp&template_name=vibe-dev-template&owner=@me&visibility=private).** Name it (for example `plant-diary`), optionally say what the app should do under **Description**, and tap **Create repository**.
 2. **[Give Claude access to it](https://github.com/apps/claude/installations/new).** Choose your account, then under **Repository access** add the new repository and save. Skip this if Claude can already access all your repositories.
-3. **In the Claude app,** open **Code** → **New session**. Tap the repository name above the message box and **choose your new repository** (the app opens on the one you used last). Send:
+3. **[Open Claude Code](https://claude.ai/code?prompt=Start%20my%20new%20app%20from%20this%20repository%27s%20description.).** Tap the repository name above the message box and **choose your new repository** (Claude opens the one you used last). Then send:
 
-   `Start my new app from this repository's description.`
+   ```
+   Start my new app from this repository's description.
+   ```
 
    Or just describe the app you want.
 
