@@ -46,7 +46,7 @@ https://github.com/<owner>/<repo>/releases/download/test-build/app.apk
 
 ## Keep building
 
-[Open this app in Claude](https://claude.ai/code?repositories=<owner>/<repo>)
+In the Claude app, open **Code** → **New session**, choose `<repo>` above the message box, and describe what to change. (On a computer, [this link](https://claude.ai/code?repositories=<owner>/<repo>) opens it directly.)
 
 Built with [vibe-dev-template](https://github.com/wurp/vibe-dev-template) and Claude.
 ```

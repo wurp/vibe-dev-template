@@ -2,29 +2,28 @@
 
 # Build Android apps from your phone with Claude
 
-<!-- vibe-dev:start-link -->
-> **Made a repository from this template?** Within a minute or two, start steps for your repository appear here. Refresh the page if you don't see them yet.
-<!-- /vibe-dev:start-link -->
+Describe an app in the Claude app. Claude writes it, GitHub builds it, and a few minutes later you install it on your phone from a link. Ask for changes the same way; each new version installs over the old one and keeps your data. Your code stays in your own GitHub repository, using your own Claude subscription.
 
-Describe the app you want in the Claude app. Claude writes it, GitHub builds it, and a few minutes later you install it on your phone from a link. Ask for changes the same way; each new version installs over the old one and keeps your data.
+## Start a new app (3 steps)
 
-Your code lives in your own GitHub repository, and it uses your own Claude subscription. No other service holds your login.
+1. **[Create your app's repository](https://github.com/new?template_owner=wurp&template_name=vibe-dev-template&owner=@me&visibility=private).** Name it (for example `plant-diary`), optionally say what the app should do under **Description**, and tap **Create repository**.
+2. **[Give Claude access to it](https://github.com/apps/claude/installations/new).** Choose your account, then under **Repository access** add the new repository and save. Skip this if Claude can already access all your repositories.
+3. **In the Claude app,** open **Code** → **New session**. Tap the repository name above the message box and **choose your new repository** (the app opens on the one you used last). Send:
 
-## What you need
+   `Start my new app from this repository's description.`
 
-- An Android phone.
-- A **Claude Pro or Max** plan. Claude Code in the cloud isn't on the Free plan. (With an API key, see [Using a computer or an API key](https://github.com/wurp/vibe-dev-template/wiki/Using-a-computer-or-an-API-key).)
-- A free **GitHub** account.
+   Or just describe the app you want.
 
-## Set up (about 5 minutes)
+First time? You'll need a **Claude Pro or Max** plan and a free **GitHub** account, and you connect GitHub to Claude once at [claude.ai/code](https://claude.ai/code). See [Setup in detail](https://github.com/wurp/vibe-dev-template/wiki/Setup-in-detail).
 
-1. **Create your app's repository.** Tap **[Create my app](https://github.com/new?template_owner=wurp&template_name=vibe-dev-template&owner=@me&visibility=private)**. Sign in to GitHub (or create a free account), give the repository a short name like `plant-diary`, optionally say what the app should do under **Description** (Claude starts from it), and tap **Create repository**. It's private: only you can see it. (To share the app with friends later, you can make it public.)
-2. **Start building.** About a minute later, your new repository's page shows **Next: start building** at the top. In the Claude app, open **Code** → **New session**, tap the repository name above the message box and **choose your new repository** (the app opens on the one you used last), then send the message shown there. Approve GitHub access if Claude asks.
-3. **Install it.** When Claude says it's ready, it gives you a link.
-   - Long-press the link, choose **Copy link**, and paste it into **Chrome**, signed in to GitHub. (Downloads can stall inside the Claude app.)
-   - If Chrome warns about the file, tap **Download anyway**, then tap the download.
-   - The first time, Android asks you to allow installs from Chrome, and Google Play Protect asks you to confirm an app from an unknown developer. Both are normal for apps not from the Play Store.
-   - Play Protect scans each new version before it installs. Just wait for it.
+## Install it
+
+When Claude says it's ready, it gives you a link.
+
+- Long-press the link, choose **Copy link**, and paste it into **Chrome**, signed in to GitHub. (Downloads can stall inside the Claude app.)
+- If Chrome warns about the file, tap **Download anyway**, then tap the download.
+- The first time, Android asks you to allow installs from Chrome, and Google Play Protect asks you to confirm an app from an unknown developer. Both are normal for apps not from the Play Store.
+- Play Protect scans each new version before it installs. Just wait for it.
 
 After that, tell Claude what to change. The link stays the same, and the new version installs over the old one.
 
@@ -35,8 +34,9 @@ After that, tell Claude what to change. The link stays the same, and the new ver
 
 ## More
 
-- [Setup in detail](https://github.com/wurp/vibe-dev-template/wiki/Setup-in-detail), including making the repository public and starting without the link.
+- [Setup in detail](https://github.com/wurp/vibe-dev-template/wiki/Setup-in-detail): first-time setup, and making the repository public to share your app.
 - [Faster checks with one network setting](https://github.com/wurp/vibe-dev-template/wiki/Faster-checks).
+- [Using a computer or an API key](https://github.com/wurp/vibe-dev-template/wiki/Using-a-computer-or-an-API-key).
 - [How it works](https://github.com/wurp/vibe-dev-template/wiki/How-it-works), for developers.
 - [Costs and limits](https://github.com/wurp/vibe-dev-template/wiki/Costs-and-limits).
 - Questions and ideas: [Discussions](https://github.com/wurp/vibe-dev-template/discussions).
